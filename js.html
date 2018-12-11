@@ -1,0 +1,63 @@
+<html>
+<head>
+</head>
+<body>
+"jon".constructor 
+
+</body>
+</html>
+<script>
+
+//"use strict";
+x = 33;
+var str = "visit runoob";
+var n = str.search(/Runoob/i);
+console.log(n);
+
+var str = "visit runoob";
+var n = str.search("runoob");
+console.log(n);
+
+var str = "visit runoob";
+var txt = str.replace(/runoob/i,"ccc");
+console.log(txt);
+
+var patt = /e/;
+var r = patt.test("the best things in life are free!");
+console.log(r);
+
+var r = /e/.exec("the best things in life are free!");
+console.log(r);
+
+//错误
+var txt = "";
+function message()
+{
+	try {
+		adddlert("welcome guest!");
+	} catch(err) {
+		txt = "cc\n\n";
+		txt += "e:" + err.message + "\n\n";
+		alert(txt);
+	}
+}
+//message();
+
+function errtest()
+{	
+	try{
+		try{
+			adddlret("cc");
+		} catch(ecc) {
+			alert("e1:" + ecc);
+		}
+	} catch(err) {
+		alert("e2:" + err);
+	}	
+}
+errtest();
+
+
+
+
+</script>

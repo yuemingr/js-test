@@ -3,7 +3,7 @@
 </head>
 <body>
 "jon".constructor 
-
+<p id="demo">demo</p>
 </body>
 </html>
 <script>
@@ -57,7 +57,15 @@ function errtest()
 }
 errtest();
 
-
-
+//json
+var b = '{"name":"mike","sex":"n","age":"29"}';
+var bo = JSON.parse(b);
+console.log(typeof(bo));
+var txt = '{ "sites":[' +
+	'{"name":"root","url":"www.baiduc.com"},' + 
+	'{"name":"google","url":"www.google.com"},' +
+	'{"name":"taobao","url":"www.taobao.com"}]}';
+obj = JSON.parse(txt);
+document.getElementById("demo").innerHTML = obj.sites[1].name + " " + obj.sites[1].url;
 
 </script>

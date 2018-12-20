@@ -4,6 +4,7 @@
 <body>
 "jon".constructor 
 <p id="demo">demo</p>
+<div id="div1">ddd</div>
 </body>
 </html>
 <script>
@@ -67,5 +68,29 @@ var txt = '{ "sites":[' +
 	'{"name":"taobao","url":"www.taobao.com"}]}';
 obj = JSON.parse(txt);
 document.getElementById("demo").innerHTML = obj.sites[1].name + " " + obj.sites[1].url;
+
+//闭包
+var add = (function(){
+	var counter = 0;
+	return function () {return counter += 1;}
+})();
+
+add();
+add();
+console.log(add());
+
+function aa(){
+	var a = 0;
+	return function(){return a += 1;}
+}
+var c = aa();
+c();
+c();
+console.log(c());
+var d = aa();
+d();
+console.log(d());
+
+
 
 </script>
